@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.jsonl
+*.lock
+*.tip
+.harness_*.tmp
+tmp/
+output/
+outputs/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

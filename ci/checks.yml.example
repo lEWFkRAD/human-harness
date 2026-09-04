@@ -1,0 +1,28 @@
+# Inactive template. See ci/README.md before installation.
+name: Public research checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Smoke tests and declared expected failures (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Scan public source bundle
+        run: python scripts/check_publication.py
+      - name: Run smoke and known-defect tests (not acceptance)
+        run: python -m unittest discover -s tests -v
