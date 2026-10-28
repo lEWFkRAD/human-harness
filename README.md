@@ -1,3 +1,10 @@
+<!-- project-home:start -->
+**[The Human Harness project homepage](https://lewfkrad.github.io/human-harness/)** · [Documentation](https://github.com/lEWFkRAD/human-harness/blob/main/docs/paper.md)
+
+Research on a shared evidence record for human–AI collaboration, with an experimental audit-log prototype.
+
+<!-- project-home:end -->
+
 # The Human Harness
 
 ![The Human Harness — one harness around the pair, two ports, one truth](assets/hero.png)
